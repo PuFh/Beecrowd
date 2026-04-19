@@ -1,28 +1,28 @@
 #include <stdio.h>
 
 int main(){
-    int n,x,y,soma;
-
+    int n,x,y,i,j;
+    int somador;
     scanf("%d",&n);
-
+    // y tem que ser maior que x
     for(int i = 0; i < n;i++){
-        scanf("%d %d",&x,&y);
-    
-        if(y > x){
-            for(int i = x; i < y;i++){
-                if(i%2!=0){
-                    soma +=i;
-                }
-            }
-        }else{
-            for(int i = y; i < x;i++){
-                if(i%2!=0){
-                    soma +=i;
-                }
-            }
+        scanf("%d %d",&x, &y);
+        if(x > y){
+            int ax;
+            ax = y;
+            y = x;
+            x = ax;
         }
-        printf("%d\n",soma);
-  
+        somador = 0;
+        j = x+1;
+        while (j < y){
+            if(j%2 != 0){
+                somador += j;
+            }
+            j++;
+        }
+        printf("%d\n",somador);
+        
     }
     return 0;
 }
