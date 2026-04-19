@@ -8,8 +8,8 @@ int main(){
     if(0 < n < 13){
         //codigo
         int fat = 1;
-        for(int i = n; i <= n;i--){
-            fat *= n-1;
+        for(int i = n; i >= 1;i--){
+            fat *= i;
         }
         
         printf("%d\n",fat);  
